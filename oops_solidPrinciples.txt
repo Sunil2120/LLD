@@ -1,0 +1,128 @@
+Oops and Solid Principles
+
+
+LLD - more focused on code 
+code should be extensionable and readable
+
+code should be modular, maintainable and extendible
+class and objects
+
+class has properties(like blueprint) and objects add values to class properties
+
+Oops : way of designing or write code --> using which we can implement real world scenarios.
+
+Encapsulation : encapsulating/binding together the data and the functions that manipulate them.(getters and setters)
+
+Abstraction : Abstraction in OOPS is used to hide unnecessary information and display only necessary information to the users interacting. 
+
+
+Polymorphism : implementing same thing in different forms(acting differently in different conditions)
+Inheritance : inherting properties from parent class
+
+Polymorphism in Java : same as in C++ except there is no pointers in JAVA
+
+Runtime Polymorphism in JAVA:
+
+*no virtual keywords in Java
+in C++ abstract is using pure virtual functions
+virtual void getSalaray()=0;
+
+abstract class - extends
+interface - implements
+
+
+-------------------------------------
+
+SOLID Principles
+Guidelines for designing
+Principles that can be used to write maintainable, extensionable, reusable code
+
+S - Single Responsibility : A class should be responsible for only one thing.
+O  - Open/closed : Open for extension and closed for modification.
+
+    add new functions without changing present code
+example : Logger
+
+Logger
+(Debug Logger,Info Logger) extends Logger
+
+Error Logger : to implement error logger class we should not modify Logger class instead we should extend it and implement 
+                required logic in error logger class.
+
+Liskov Substitution Principle : Base class variables should be able to store derived class objects.
+                                Subclasses should be substituable for base classes.
+
+
+base class should be replacable by derived class without breaking anything
+wherever I am using base class I should be able to use derived class
+
+(Delivery Partner, Customer, Restaurant Owner ) extends User(function kyc())
+
+kyc function for delivery partner and restaurant owner makes sense but for customer it doesnot make any sense.
+
+Solution : 
+
+User ---> Partner(kyc()) ---> Delivery partner and Restaurant owner
+|
+|
+|
+Customer
+
+Interface Segregation Principle : 
+
+ classes implementing interface should not be forced to implement methods.
+ in above example customer is forced to implement kyc () method although it is not required.
+ we should have smaller more specific interfaces.
+
+
+ Dependency Inversion Principle : 
+    Loose coupling
+    High level modules should not depend on low level modules instead there should be an abstraction between them.
+
+    example : Notification manager
+
+
+    class NotificationManager{
+        if(SMS) sms.sendNotification();
+        if(Telegram) telegram.sendNotification();
+        if(Whatsapp) whatsapp.sendNotification();
+    } 
+
+    in above example NotificationManager is high level module which is dependend on low level modules
+
+
+    NotificationManager
+            |
+            |
+            |
+    INotification Sender(Abstraction)
+    /           |           \
+   SMSSender    WASender    TelegramSender
+
+
+
+   S - Single reason to change
+   O - add new functions without changing present code
+   L - Super class's obj can be replaced by sub class's objects
+   I - don't force to implement methods not intended
+   D - High level modules should not depend on LL Modules, Abstraction layer in b/w
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
