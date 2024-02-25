@@ -1,0 +1,98 @@
+Relationships between classes, UML
+
+Inheritance - "is a" relationship
+ex : Person has a heart (person cannot exist without heart and vice versa)
+     Person has a bag (person can exist without bag and vice versa)
+
+
+Restaurant has a menu (menu cannot exist without Restaurant and vice versa)
+menu and food items
+
+ "has-a" relationship -> Aggregation("has -a") and composition("part of")
+
+ Aggregation (Person - Bag)
+ Composition (Person - Heart)
+
+
+Ex : Restaurant and Restaurant Owner
+
+
+Rest1 -> RO1, RO2
+Rest2 -> RO2, RO3
+
+in above example if Rest1 dies RO2 doesnot die becasue Rest2 has RO2 so it's Aggregation
+
+Rest1 -> RO2
+Rest2 -> R03
+
+in above example if Rest1 dies RO2 dies and Rest2 dies RO3 dies --> Composition
+
+Composition: entire lifecycle of subclass should depend on base class
+
+
+Many to Many relationships : Aggregation
+One to One relationship : Composition
+
+Aggregation : A has B and B can exist without A
+Composition : A has B but B can't exist without A
+
+Association : 
+Bidirectional Association : A & B can call each other
+Unidirectional Association : A can call B but B can't call A
+
+User can access Payment gateway but Payment gateway can't access User
+
+KISS : Keep it simple, Stupid
+YAGNI : You aren't gonna need it
+DRY : Don't repeat yourself
+
+Design Patterns : for commonly occuring problems, there is tried and tested solutions
+
+Design patterns are templates using which we can  solve commonly occuring problems
+Creational Design Patterns
+Structural Design Patterns
+Behavioural Design Patterns 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
